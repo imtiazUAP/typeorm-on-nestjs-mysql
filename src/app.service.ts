@@ -10,7 +10,9 @@ export class AppService {
   ) {}
 
   getAll(): Promise<User[]> {
-    return this.userRepository.find();
+    return this.userRepository.find({
+      relations: ['pets']
+    });
     // SELECT * from user;
   }
 
