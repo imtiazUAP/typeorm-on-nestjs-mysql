@@ -36,4 +36,24 @@ export class AppController {
   async removeUser(@Param('id') id: number) {
       return await this.appService.deleteUser(id);
   }
+
+  @Get('/seed/insert')
+  async seed() {
+      return await this.appService.seed();
+  }
+
+  @Get('/seed/list/:id')
+  async getEmployeeById(@Param('id') id: number) {
+      return await this.appService.getEmployeeById(id);
+  }
+
+  @Get('/seed/list/alter/:id')
+  async getEmployeeByIdQB(@Param('id') id: number) {
+      return await this.appService.getEmployeeById(id);
+  }
+
+  @Delete('/seed/:id')
+  async deleteEmployee(@Param('id') id: number) {
+      return await this.appService.deleteEmployeeById(id);
+  }
 }
