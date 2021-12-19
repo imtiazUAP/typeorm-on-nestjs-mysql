@@ -193,17 +193,21 @@ Data model we want to create:
 - [ ] One-to-Many relationship with Tasks
 - [ ] Many-to-Many relationship with meetings
 
+
 - [ ] Contact Info Table
 - [ ] One-to-One relationship with Employee
 - [ ] Delete if Employee is deleted
+
 
 - [ ] Task Table
 - [ ] Many-to-One relationship with Employee
 - [ ] Set employeeId to NULL if employee is deleted
 
+
 - [ ] Meeting Table
 - [ ] Many-toMany relationship with Employee (via relationship table)
 - [ ] Remove Employee as attendee if Employee is deleted
+
 
 Create a folder under src folder names entity
 Create a file in entity folder names user.entity.ts
