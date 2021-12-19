@@ -186,6 +186,7 @@ Step 4: (Create entities)
 Data model we want to create:
 ![alt text](https://github.com/imtiazUAP/typeorm-on-nestjs-mysql/blob/master/utilities/schema.JPG?raw=true)
 
+//
 - [ ] Employee table
 - [ ] Can reference self(manager and direct reports
 - [ ] If manager is deleted set reference to NULL
@@ -193,17 +194,17 @@ Data model we want to create:
 - [ ] One-to-Many relationship with Tasks
 - [ ] Many-to-Many relationship with meetings
 
-
+//
 - [ ] Contact Info Table
 - [ ] One-to-One relationship with Employee
 - [ ] Delete if Employee is deleted
 
-
+//
 - [ ] Task Table
 - [ ] Many-to-One relationship with Employee
 - [ ] Set employeeId to NULL if employee is deleted
 
-
+//
 - [ ] Meeting Table
 - [ ] Many-toMany relationship with Employee (via relationship table)
 - [ ] Remove Employee as attendee if Employee is deleted
