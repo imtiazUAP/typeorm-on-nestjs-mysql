@@ -182,8 +182,9 @@ imports: [TypeOrmModule.forRoot(config)],
 
 
 Step 4: (Create entities)
-Data model we want to create:
 
+Data model we want to create:
+![alt text](https://github.com/imtiazUAP/typeorm-on-nestjs-mysql/blob/master/utilities/schema.JPG?raw=true)
 
 - [ ] Employee table
 - [ ] Can reference self(manager and direct reports
