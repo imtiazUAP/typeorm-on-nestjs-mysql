@@ -9,11 +9,13 @@ import { Employee } from './entity/employee.entity';
 import { ContactInfo } from './entity/contact-info.entity';
 import { Meeting } from './entity/meeting.entity';
 import { Task } from './entity/task.entity';
+import { EmployeeModule } from './employee/employee.module';
 
 @Module({
   imports: [
     TypeOrmModule.forRoot(config),
     TypeOrmModule.forFeature([User, Pet, Employee, ContactInfo, Meeting, Task]),
+    EmployeeModule,
   ],
   controllers: [AppController],
   providers: [AppService],

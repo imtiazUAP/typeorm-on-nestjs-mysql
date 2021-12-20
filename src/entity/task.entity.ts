@@ -1,15 +1,17 @@
-import { Column, Entity, ManyToOne, OneToOne, PrimaryGeneratedColumn } from "typeorm";
-import { ContactInfo } from "./contact-info.entity";
-import { Employee } from "./employee.entity";
+import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
+
+import { Employee } from './employee.entity';
 
 @Entity()
 export class Task {
-    @PrimaryGeneratedColumn()
-    id: number;
+  @PrimaryGeneratedColumn()
+  id: number;
 
-    @Column()
-    name: string;
+  @Column()
+  name: string;
 
-    @ManyToOne(() => Employee, employee => employee.tasks, {onDelete: 'SET NULL'})
-    employee: Employee;
+  @ManyToOne(() => Employee, (employee) => employee.tasks, {
+    onDelete: 'SET NULL',
+  })
+  employee: Employee;
 }

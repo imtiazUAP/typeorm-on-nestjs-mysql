@@ -1,17 +1,17 @@
-import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
-import { Pet } from "./pet.entity";
+import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
+import { Pet } from './pet.entity';
 
 @Entity()
 export class User {
-    @PrimaryGeneratedColumn()
-    id: number;
+  @PrimaryGeneratedColumn()
+  id: number;
 
-    @Column()
-    name: string;
+  @Column()
+  name: string;
 
-    @Column()
-    age: number;
+  @Column()
+  age: number;
 
-    @OneToMany(type => Pet, pet => pet.owner)
-    pets: Pet[];
+  @OneToMany(() => Pet, (pet) => pet.owner)
+  pets: Pet[];
 }

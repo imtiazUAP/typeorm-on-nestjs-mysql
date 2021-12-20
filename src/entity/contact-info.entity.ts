@@ -1,21 +1,29 @@
-import { Column, Entity, JoinColumn, OneToOne, PrimaryGeneratedColumn } from "typeorm";
-import { Employee } from "./employee.entity";
+import {
+  Column,
+  Entity,
+  JoinColumn,
+  OneToOne,
+  PrimaryGeneratedColumn,
+} from 'typeorm';
+import { Employee } from './employee.entity';
 
 @Entity()
 export class ContactInfo {
-    @PrimaryGeneratedColumn()
-    id: number;
+  @PrimaryGeneratedColumn()
+  id: number;
 
-    @Column({nullable: true})
-    phone: string;
+  @Column({ nullable: true })
+  phone: string;
 
-    @Column()
-    email: string;
+  @Column()
+  email: string;
 
-    @Column()
-    employeeId: number;
+  @Column()
+  employeeId: number;
 
-    @OneToOne(() => Employee, employee => employee.contactInfo, {onDelete: 'CASCADE'})
-    @JoinColumn()
-    employee: Employee;
+  @OneToOne(() => Employee, (employee) => employee.contactInfo, {
+    onDelete: 'CASCADE',
+  })
+  @JoinColumn()
+  employee: Employee;
 }
